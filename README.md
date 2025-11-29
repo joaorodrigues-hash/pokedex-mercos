@@ -35,8 +35,3 @@ Dificuldades encontradas
 
  Prints da aplicação inclusos 
 
-![Screenshot 1](./screenshots/01.png)
-![Screenshot 2](./screenshots/02.png)
-
-(Se ainda não tiver a pasta `/screenshots`, você pode criá-la no repositório.)
-
