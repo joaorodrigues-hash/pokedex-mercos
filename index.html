@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Pokédex Premium 🌑</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;800&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="light-mode">
+
+  <header class="site-header">
+    <nav class="pokemon-nav">
+      <a href="#">
+        <span class="nav-icon">🏠</span>
+        <span class="nav-text">Página Inicial</span>
+      </a>
+      <a href="#" class="active"> <span class="nav-icon">🔴</span>
+        <span class="nav-text">Pokédex</span>
+      </a>
+      <a href="#">
+        <span class="nav-icon">🎮</span>
+        <span class="nav-text">Jogos</span>
+      </a>
+      <a href="#">
+        <span class="nav-icon">📺</span>
+        <span class="nav-text">Animações</span>
+      </a>
+      <a href="#">
+        <span class="nav-icon">📰</span>
+        <span class="nav-text">Notícias</span>
+      </a>
+    </nav>
+    <div class="color-bar">
+      <span class="color-gray"></span>
+      <span class="color-orange"></span>
+      <span class="color-yellow"></span>
+      <span class="color-green"></span>
+      <span class="color-blue"></span>
+    </div>
+  </header>
+  <button id="darkModeToggle" class="mode-toggle" onclick="toggleDarkMode()">Modo Escuro Gótico 🌙</button>
+
+  <h1>Pokédex</h1>
+
+  <div class="search-box">
+    <input id="searchInput" type="text" placeholder="Buscar Pokémon pelo nome...">
+    <button onclick="buscarPokemon()">Buscar</button>
+  </div>
+
+  <p id="loading" class="hidden">Carregando...</p>
+  <p id="error" class="hidden error">Pokémon não encontrado!</p>
+
+  <div id="pokemon-card" class="pokemon-card"></div>
+
+
+  <h2>Lista de Pokémon</h2>
+
+  <div class="filters">
+    <input id="listSearch" type="text" placeholder="Filtrar pelo nome">
+
+    <select id="typeFilter">
+      <option value="">Todos os tipos</option>
+      <option value="grass">Grass</option>
+      <option value="fire">Fire</option>
+      <option value="water">Water</option>
+      <option value="bug">Bug</option>
+      <option value="poison">Poison</option>
+      <option value="normal">Normal</option>
+      <option value="electric">Electric</option>
+      <option value="psychic">Psychic</option>
+      <option value="rock">Rock</option>
+      <option value="ice">Ice</option>
+      <option value="dragon">Dragon</option>
+      <option value="ghost">Ghost</option>
+      <option value="fairy">Fairy</option>
+      <option value="dark">Dark</option>
+      <option value="steel">Steel</option>
+      <option value="fighting">Fighting</option>
+      <option value="ground">Ground</option>
+      <option value="flying">Flying</option>
+    </select>
+    
+    <select id="generationFilter">
+        <option value="">Todas as Gerações</option>
+        <option value="1">Gen 1</option>
+        <option value="2">Gen 2</option>
+        <option value="3">Gen 3</option>
+        <option value="4">Gen 4</option>
+        <option value="5">Gen 5</option>
+        <option value="6">Gen 6</option>
+        <option value="7">Gen 7</option>
+        <option value="8">Gen 8</option>
+        <option value="9">Gen 9</option>
+    </select>
+
+    <select id="sortSelect">
+      <option value="">Ordenar por...</option>
+      <option value="name-asc">Nome A-Z</option>
+      <option value="name-desc">Nome Z-A</option>
+      <option value="id-asc">ID crescente</option>
+      <option value="id-desc">ID decrescente</option>
+    </select>
+  </div>
+
+  <div id="pokemon-list" class="grid"></div>
+
+  <div class="pagination">
+    <button onclick="paginaAnterior()">◀ Prev</button>
+    <span id="page-number">Página 1</span>
+    <button onclick="proximaPagina()">Next ▶</button>
+  </div>
+
+
+  <h2>Favoritos ⭐ (<span id="fav-count">0</span>)</h2>
+  <div id="favorites-list" class="grid"></div>
+
+
+  <script src="script.js"></script>
+</body>
+</html>
