@@ -35,3 +35,6 @@ Dificuldades encontradas
 
  Prints da aplicação inclusos 
 
+![Print 1](screenshots/Captura de tela 2025-11-28 230528.png)
+![Print 2](screenshots/Captura de tela 2025-11-28 230548.png)
+![Print 3](screenshots/Captura de tela 2025-11-28 230621.png)
